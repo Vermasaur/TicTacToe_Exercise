@@ -55,14 +55,12 @@ function updatescore(userPoints){
 // check for end game scenarios before continuation of the game
 function updatestatus(score){
 	for (var i = 0; i < endgames.length; i++){
+		// bitwise operation on two base2 scores ensures that a winning combo can be deteted amidst additional non-winning selections
 		if ((endgames[i] & score) === endgames[i]){
-			//binary bit &operation, only both true is true
 			winner = curr_player;
-			
 			break;
 		}
 	}
-	//analyze result
 	if (winner !== ""){
 		alert(winner + " has emerged triumphant!");
 		newgame();
@@ -74,7 +72,6 @@ function updatestatus(score){
 	else{
 		updateturn();
 	}
-
 }
 
 // change who the current player is depending on who played the last turn
@@ -104,6 +101,5 @@ function newgame(){
 		clicked[i].innerHTML = "&nbsp;"; 
 	}
 	document.getElementById("curr_player").innerHTML = "X may proceed";
-
 }
 
