@@ -6,11 +6,29 @@
         <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
         <title>~ Tic Tac Toe ~</title>
     </head>
-    <body onload = "startgame()">
-        <div class = "title"></div>
-        <h1>~ Tic Tac Toe ~</h1>
-        <h2 id="winner"></h2>
-        <h2 id="curr_player"></h2>
-    </body>
-	
+    <body onload="startgame()">
+		<div class="title">
+			<h1>~ Tic Tac Toe ~</h1>
+			<h2 id="curr_player"></h2>
+		</div>
+		<br>
+		<br>
+		<div class="board">
+			<div id="row-1">
+				<div onclick="playgame(this,1)">&nbsp;</div>
+				<div onclick="playgame(this,2)">&nbsp;</div>
+				<div onclick="playgame(this,4)">&nbsp;</div>
+			</div>
+			<div id="row-2">
+				<div onclick="playgame(this,8)">&nbsp;</div>
+				<div onclick="playgame(this,16)">&nbsp;</div>
+				<div onclick="playgame(this,32)">&nbsp;</div>
+			</div>
+			<div id="row-3">
+				<div onclick="playgame(this,64)">&nbsp;</div>
+				<div onclick="playgame(this,128)">&nbsp;</div>
+				<div onclick="playgame(this,256)">&nbsp;</div>
+			</div>
+		</div>
+	</body>
 </html>

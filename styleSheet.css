@@ -1,9 +1,71 @@
+
 * {
 	margin:0;
 	padding:0;
 	user-select: none;
 	font-family: 'Rakkas', cursive;
-	 }
+}
+
 .title{
 	margin:0 auto;
+}
+
+h1{
+	color: #4EC293;
+	letter-spacing: 0.0625em;
+	text-align: center;
+	font-size:70px;
+}
+
+h2{
+	height:20px;
+	width:300px;
+	letter-spacing: 0.0625em;
+	text-align:center;
+	font-size:30px;
+	margin:0 auto;
+}
+
+/* center the board neatly */
+div.board{
+	padding-top:12px;
+	padding-bottom:12px;
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* spatially orient rows */
+div[id^="row"] div{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #405663;
+	float: left;
+	box-sizing: border-box;
+}
+
+div[id^="row"]{
+	overflow: hidden;
+	clear: both;
+}
+
+/* ensure active board has borders on the outer edges */
+div[id^="row"] div:first-child{border-left: 3px solid #405663;}
+div[id^="row"] div:last-child{border-right: 3px solid #405663;}
+div[id="row-1"] div {border-top: 3px solid #405663;}
+div[id="row-3"] div {border-bottom: 3px solid #405663;}
+
+/* ensure X's and O's are big */
+span{
+	font-size: 60px;
+	padding-top:30px;
+	display: inline-block;
+}
+
+/* background color and padding */
+body{
+	background-color: #DAE7ED;
+	padding: 20px;
+	width: 1000px;
+	margin: 10px auto;
 }
