@@ -55,7 +55,7 @@ function updatescore(userPoints){
 // check for end game scenarios before continuation of the game
 function updatestatus(score){
 	for (var i = 0; i < endgames.length; i++){
-		// bitwise operation on two base2 scores ensures that a winning combo can be deteted amidst additional non-winning selections
+		// bitwise operation on two base2 scores ensures that a winning combo can be detected amidst additional non-winning selections
 		if ((endgames[i] & score) === endgames[i]){
 			winner = curr_player;
 			break;
